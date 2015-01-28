@@ -1,0 +1,8 @@
+<h1><%= @category.name %></h1>
+
+
+  <ul>
+        <% @posts.each do |x| %>
+          <a href="/posts/<%= x.id %>"><li><%= x.title %></li></a>
+        <% end %>
+      </ul>
