@@ -1,6 +1,3 @@
-require 'faker'
-
-
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |x|
@@ -9,7 +6,9 @@ class CreatePosts < ActiveRecord::Migration
       x.string :name
       x.string :phone
       x.string :email
-      x.belongs_to :category
+      x.references :category
+      # x.belongs_to :category
+      # x.integer :category_id
 
       x.timestamps
     end

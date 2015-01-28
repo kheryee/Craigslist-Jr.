@@ -1,5 +1,4 @@
 <h1><%= @post.title %></h1>
-
   <p>Created at: <%= @post.created_at %></p>
   <p>Description: <%= @post.description %></p>
   <p>By: <%= @post.name %></p>
@@ -7,4 +6,15 @@
   <p>Email-address: <%= @post.email %></p>
   <p>Last updated at: <%= @post.updated_at %></p>
 
-<form></form>
+
+
+<a href="/posts/<%= @post.id %>/edit">Edit post</a>
+
+
+<br><br>
+<form action="/posts/<%= @post.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" value="Delete post">
+</form>
+<br><br>
+<a href="/">Back to Home</a>

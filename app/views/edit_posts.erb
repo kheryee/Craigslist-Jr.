@@ -1,0 +1,12 @@
+<form action="/posts/<%= @post.id %>" method="post">
+  <h1>Edit a post</h1><br><br><br>
+  <input type="hidden" name="_method" value="PATCH" />
+
+  Your name:<input type="text" name="posts[name]" value="<%= @post.name %>"><br>
+  Contact number:<input type="text" name="posts[phone]" value="<%= @post.phone %>"><br>
+  Email:<input type="text" name="posts[email]" value="<%= @post.email %>"><br>
+  Title:<input type="text" name="posts[title]" value="<%= @post.title %>"><br><br><br><br>
+  Description:<br><textarea name="posts[description]" cols="40" rows="10"><%= @post.description %></textarea>
+  <br><br><br>
+  <input type="submit" value="Submit your post">
+</form>

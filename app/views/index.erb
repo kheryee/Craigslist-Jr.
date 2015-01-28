@@ -3,29 +3,23 @@
   <p></p>
 
   <table>
-    <p>
+    <p>Have something to offer? <a href="/posts/new">Write a new post!</a>
     <tr>
-      <th>By categories</th>
-      <th>By titles</th>
+      <th>Categories</th>
     </tr>
     <td>
       <ul>
         <% @categories.each do |x| %>
-          <a href="/categories/<%= x.name %>"><li><%= x.name %></li></a>
+          <a href="/categories/<%= x.id %>"><li><%= x.name %></li></a>
         <% end %>
       </ul>
     </td>
-    <td>
-      <ul>
-        <% @posts.each do |x| %>
-        <a href="/posts/<%= x.id %>"><li><%= x.title %></li></a>
-        <% end %>
-      </ul>
-    </td>
-
-
   </table>
+    <a href="/all_posts">All posts</a><br><br>
+    <a href="/categories/new">Create a new category</a>
 </div>
+
+
 
 <!-- <form action="/search" method="post">
   <input type="text" name="search">

@@ -24,4 +24,4 @@ class Seed
 end
 
 Seed.post_seed
-Seed.category_seed
+# Seed.category_seed

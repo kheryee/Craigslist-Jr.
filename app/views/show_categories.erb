@@ -1,0 +1,16 @@
+<h1><%= @category.name %></h1>
+
+
+  <ul>
+    <% @posts.each do |x| %>
+      <a href="/posts/<%= x.id %>"><li><%= x.title %></li></a>
+    <% end %>
+  </ul>
+
+
+<a href="/categories/<%= @category.id %>/posts/new">Create a new post</a>
+<br><br>
+<form action="/categories/<%= @category.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" value="Delete category">
+</form>
